@@ -1,5 +1,5 @@
 {
-  "name": "@egulatee/checkedenvironmentvariables",
+  "name": "checkedenvironmentvariables",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,8 +9,10 @@
   "scripts": {
     "build": "tsc",
     "type-check": "tsc --noEmit",
-    "test": "jest"
-  },
+      "test": "jest",
+      "test:watch": "jest --watch",
+      "test:coverage": "jest --coverage"
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",
