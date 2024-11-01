@@ -45,15 +45,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          registry-url: 'https://npm.pkg.github.com'
           scope: '@egulatee'
-          
-      - name: Configure npm
-        run: |
-          echo "@${GITHUB_REPOSITORY_OWNER}:registry=https://npm.pkg.github.com" > .npmrc
-          echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" >> .npmrc
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Install dependencies
         run: npm ci
@@ -61,7 +53,7 @@ jobs:
       - name: Build
         run: npm run build
         
-      - name: Publish to GitHub Packages
+      - name: Publish to NPMJS
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
