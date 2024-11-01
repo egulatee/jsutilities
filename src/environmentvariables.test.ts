@@ -1,5 +1,5 @@
-import { getEnvironmentVariable, getEnvironmentVariableThrowingException } from './environmentvariables';
-import { Logger } from 'tslog';
+import { getEnvironmentVariable, getEnvironmentVariableThrowingException } from './environment';
+import { Logger, ILogObj } from 'tslog';
 
 // Mock tslog
 jest.mock('tslog');
@@ -9,7 +9,7 @@ describe('Environment Variable Utils', () => {
   const originalEnv = process.env;
   
   // Mock logger instance
-  let mockLogger: jest.Mocked<Logger>;
+  let mockLogger: jest.Mocked<Logger<ILogObj>>;
   
   beforeEach(() => {
     // Reset process.env before each test
@@ -22,7 +22,7 @@ describe('Environment Variable Utils', () => {
     mockLogger = {
       warn: jest.fn(),
       debug: jest.fn(),
-    } as unknown as jest.Mocked<Logger>;
+    } as unknown as jest.Mocked<Logger<ILogObj>>;
     
     // Mock Logger constructor
     (Logger as jest.Mock).mockImplementation(() => mockLogger);
