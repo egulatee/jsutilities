@@ -1,1 +1,1 @@
-export * from './dist/environmentvariables';
+export * from './dist/index';
