@@ -1,0 +1,19 @@
+import { Logger, ILogObj } from "tslog";
+
+const log: Logger<ILogObj> = new Logger({ minLevel: 3 });
+
+export function getEnvironmentVariable(key: string): string | undefined {
+  if (process.env[key] == undefined) {
+    log.warn("No environment variable found for key=[" + key + "]");
+    return undefined;
+  } else if (process.env[key] == "") {
+    log.warn("Empty environment variable found for key=[" + key + "]");
+    return undefined;
+  } else {
+    const value = process.env[key];
+    log.debug(
+      "Environment Variable key[" + key + "] has value=[" + value + "]"
+    );
+    return value;
+  }
+}
