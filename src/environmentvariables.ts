@@ -17,3 +17,21 @@ export function getEnvironmentVariable(key: string): string | undefined {
     return value;
   }
 }
+
+export function getEnvironmentVariableThrowingException(key: string): string  {
+  if (process.env[key] == undefined) {
+    log.warn("No environment variable found for key=[" + key + "]");
+    throw new Error("No environment variable found for key=[" + key + "]");
+  } else if (process.env[key] == "") {
+    log.warn("Empty environment variable found for key=[" + key + "]");
+    throw new Error("Empty environment variable found for key=[" + key + "]");
+  } else {
+    const value = process.env[key];
+    log.debug(
+      "Environment Variable key[" + key + "] has value=[" + value + "]"
+    );
+    return value;
+  }
+  
+
+}
