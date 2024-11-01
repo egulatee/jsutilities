@@ -1,4 +1,4 @@
-import { getEnvironmentVariable, getEnvironmentVariableThrowingException } from './environment';
+import { getEnvironmentVariable, getEnvironmentVariableThrowingException } from './environmentvariables';
 import { Logger } from 'tslog';
 
 // Mock tslog
