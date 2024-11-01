@@ -1,2 +1,1 @@
-export {getEnvironmentVariable} from "./environmentvariables"
-export {getEnvironmentVariableThrowingException} from "./environmentvariables"
+export * from './index2';

@@ -1,13 +1,14 @@
 {
   "name": "@egulatee/checkedenvironmentvariables",
-  "version": "0.0.51",
+  "version": "0.0.53",
   "description": "",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./index.js",
-      "types": "./index.d.ts"
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "repository": {
@@ -15,12 +16,10 @@
     "url": "git+https://github.com/egulatee/checkedenvironmentvariables.git"
   },
   "files": [
-    "index.js",
-    "index.d.ts",
     "dist/**/*"
   ],
   "scripts": {
-    "build": "tsc && tsc --declaration --emitDeclarationOnly --outDir dist",
+    "build": "tsc",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
