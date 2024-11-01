@@ -1,6 +1,6 @@
 {
   "name": "@egulatee/checkedenvironmentvariables",
-  "version": "0.0.54",
+  "version": "0.0.55",
   "description": "",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -19,7 +19,7 @@
     "dist/**/*",
     "!dist/**/*.test.*",
     "!dist/**/*.spec.*",
-    "!dist/**/__tests__/*"    
+    "!dist/**/__tests__/*"
   ],
   "scripts": {
     "build": "tsc",
@@ -42,4 +42,4 @@
   "dependencies": {
     "tslog": "^4.9.3"
   }
- }
+}
