@@ -2,7 +2,7 @@
   "name": "@egulatee/checkedenvironmentvariables",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/environmentvariables.js",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
