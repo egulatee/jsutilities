@@ -7,7 +7,7 @@
     "url": "git+https://github.com/egulatee/checkedenvironmentvariables.git"
   },
   "exports": {
-    ".": "./dist/checkedenvironmentvariables.js",
+    ".": "./dist/checkedenvironmentvariables.js"
   },
   "types": "dist/index.d.ts",
   "files": [
