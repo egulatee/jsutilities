@@ -1,5 +1,5 @@
 {
-  "name": "@egulatee/utilities",
+  "name": "@egulatee/jsutilities",
   "version": "0.1.0",
   "description": "",
   "main": "./dist/index.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/egulatee/utilities.git"
+    "url": "git+https://github.com/egulatee/jsutilities.git"
   },
   "files": [
     "dist/**/*",
