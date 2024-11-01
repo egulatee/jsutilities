@@ -1,1 +1,1 @@
-export * from './index2';
+export { getEnvironmentVariable, getEnvironmentVariableThrowingException } from "./environmentvariables";
