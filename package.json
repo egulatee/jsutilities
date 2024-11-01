@@ -1,6 +1,6 @@
 {
   "name": "@egulatee/checkedenvironmentvariables",
-  "version": "0.0.50",
+  "version": "0.0.51",
   "description": "",
   "main": "index.js",
   "types": "index.d.ts",
@@ -20,7 +20,7 @@
     "dist/**/*"
   ],
   "scripts": {
-    "build": "tsc && cp src/index.ts index.ts && tsc --declaration --emitDeclarationOnly",
+    "build": "tsc && tsc --declaration --emitDeclarationOnly --outDir dist",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
