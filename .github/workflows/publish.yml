@@ -9,7 +9,10 @@ on:
     branches:
       - main
 
+permissions: write-all
+
 jobs:
+  
   build:
     runs-on: ubuntu-latest
     steps:
@@ -43,7 +46,7 @@ jobs:
         with:
           node-version: '20'
           registry-url: 'https://npm.pkg.github.com'
-          scope: 'egulatee'
+          scope: '@egulatee'
           
       - name: Configure npm
         run: |
