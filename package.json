@@ -2,12 +2,16 @@
   "name": "@egulatee/checkedenvironmentvariables",
   "version": "0.0.9",
   "description": "",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/egulatee/checkedenvironmentvariables.git"
   },
-  "scripts": {
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+      "dist"
+  ],
+"scripts": {
     "build": "tsc",
     "test": "jest",
     "test:watch": "jest --watch",
