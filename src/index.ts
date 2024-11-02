@@ -1,1 +1,1 @@
-export { getEnvironmentVariable, getEnvironmentVariableThrowingException } from "./environmentvariables";
+export { getEnvironmentVariable, getEnvironmentVariableThrowingException, getEnvironmentVariableThrowingExceptionForNextJs } from "./environmentvariables";
