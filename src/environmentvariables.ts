@@ -32,6 +32,22 @@ export function getEnvironmentVariableThrowingException(key: string): string  {
     );
     return value;
   }
-  
+}
 
+export function getEnvironmentVariableThrowingExceptionForNextJs(key: string): string  {
+  const nextphase = process.env["NEXT_PHASE"]
+
+  if (process.env[key] == undefined) {
+    log.warn("No environment variable found for key=[" + key + "] in NextPhase=[" + nextphase +"]" );
+    throw new Error("No environment variable found for key=[" + key + "] in NextPhase=[" + nextphase +"]" );
+  } else if (process.env[key] == "") {
+    log.warn("Empty environment variable found for key=[" + key + "]");
+    throw new Error("Empty environment variable found for key=[" + key + "]");
+  } else {
+    const value = process.env[key];
+    log.debug(
+      "Environment Variable key[" + key + "] has value=[" + value + "]"
+    );
+    return value;
+  }
 }
