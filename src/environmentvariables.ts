@@ -39,7 +39,7 @@ export function getEnvironmentVariableThrowingExceptionForNextJs(key: string): s
 
   if (nextphase == "phase-production-build") {
     const value = process.env[key];
-    log.debug(      "Environment Variable key[" + key + "] has value=[" + value + "] in Next_Phase=[" + nextphase + "]");
+    log.debug("Environment Variable key[" + key + "] has value=[" + value + "] in Next_Phase=[" + nextphase + "]");
     return value == undefined ?  "" : value;    
   } else if (process.env[key] == undefined) {
     log.warn("No environment variable found for key=[" + key + "]")
